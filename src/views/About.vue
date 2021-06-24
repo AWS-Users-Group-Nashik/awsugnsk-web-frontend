@@ -6,10 +6,21 @@
 </template>
 
 <script>
-import Member from "../components/Member.vue";
+import Member from "@/components/Member.vue";
+import ApiService from "@/common/api.service";
 export default {
   name: "About",
   components: { Member },
+  data() {
+    return {
+      members: [],
+    };
+  },
+  created() {
+    ApiService.get("/members/").then((response) => {
+      this.members = response.data;
+    });
+  },
 };
 </script>
 
