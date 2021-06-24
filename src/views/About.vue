@@ -94,9 +94,9 @@ export default {
 				tagline: 'The north remembers...',
 			},
 		]
-		this.windowWidth = window.innerWidth
 	},
 	mounted() {
+		this.windowWidth = window.innerWidth
 		window.addEventListener('resize', () => {
 			this.windowWidth = window.innerWidth
 		})
