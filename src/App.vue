@@ -18,3 +18,14 @@ export default {
   },
 };
 </script>
+
+<style>
+@font-face {
+  font-family: "Avenir";
+  src: url(assets/fonts/Avenir/Avenir-Book.ttf) format("truetype");
+}
+
+* {
+  font-family: "Avenir";
+}
+</style>
