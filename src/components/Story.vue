@@ -1,20 +1,23 @@
 <template>
   <div class="event-wrapper">
-    <vs-col offset="1" w="10" justify="center">
+    <vs-col w="8" xs="12" justify="center">
       <div class="event-card">
         <vs-row>
-          <vs-col type="flex" w="6">
-            <vs-col type="flex" style="margin-top: -40px" w="4">
-              <img class="story-img" v-bind:src="poster_url" />
-            </vs-col>
-            <vs-col class="title-date-wrapper" w="6">
-              <div class="story-title" style="width: 100%">{{ title }}</div>
+          <vs-col type="flex" w="6" xs="12" style="flex-flow: wrap">
+            <div>
+              <vs-col type="flex" style="margin-top: -40px" w="4">
+                <img class="story-img" v-bind:src="poster_url" />
+              </vs-col>
+            </div>
+            <vs-col class="title-date-wrapper" w="5" xs="12" lg="6" sm="12">
+              <div class="story-title">{{ title }}</div>
               <div class="story-date">{{ date }}</div>
             </vs-col>
           </vs-col>
           <vs-col
             type="flex"
             w="6"
+            xs="12"
             style="flex-flow: wrap; justify-content: flex-end"
           >
             <div class="description" v-html="content"></div>
@@ -47,7 +50,9 @@ export default {
 
 <style>
 .event-wrapper {
-  margin: 60px;
+  margin: 70px 10px;
+  display: grid;
+  place-items: center;
 }
 
 .event-card {
@@ -85,15 +90,28 @@ export default {
 }
 
 .story-title {
+  width: 100%;
   font-size: 30px;
   font-weight: bold;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 .title-date-wrapper {
   flex-flow: wrap;
+  margin-left: 20px;
 }
 
 .story-date {
   font-size: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .title-date-wrapper {
+    margin-top: 20px;
+    margin-left: 0px;
+  }
 }
 </style>

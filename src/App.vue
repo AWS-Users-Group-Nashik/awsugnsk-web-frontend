@@ -28,4 +28,16 @@ export default {
 * {
   font-family: "Avenir";
 }
+
+.page-heading {
+  margin-left: 15vw;
+  font-size: 50px;
+  text-decoration: #FFC074 solid overline;
+}
+
+@media screen and (max-width: 768px) {
+  .page-heading {
+    margin-left: 5vw;
+  }
+}
 </style>

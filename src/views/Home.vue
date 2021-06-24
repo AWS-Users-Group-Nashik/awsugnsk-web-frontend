@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Home</h2>
+    <h2 class="page-heading">Home</h2>
     <Story v-for="story in stories" :key="story.id" v-bind="story" />
   </div>
 </template>
