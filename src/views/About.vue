@@ -101,6 +101,9 @@ export default {
 			this.windowWidth = window.innerWidth
 		})
 	},
+	unmounted() {
+		window.removeEventListener('resize')
+	},
 }
 </script>
 
