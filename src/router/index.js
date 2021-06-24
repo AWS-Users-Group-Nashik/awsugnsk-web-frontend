@@ -25,5 +25,10 @@ export default new Router({
       name: "about",
       component: () => import("@/views/About"),
     },
+    {
+      path: "/**",
+      name: "404",
+      component: () => import("@/views/NotFound"),
+    },
   ],
 });
