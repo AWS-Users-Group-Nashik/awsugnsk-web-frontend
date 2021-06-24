@@ -30,9 +30,14 @@ export default {
 }
 
 .page-heading {
+  margin-top: 100px;
   margin-left: 15vw;
   font-size: 50px;
-  text-decoration: #FFC074 solid overline;
+  text-decoration: #ffc074 solid overline;
+}
+
+::-webkit-scrollbar {
+  width: 0;
 }
 
 @media screen and (max-width: 768px) {

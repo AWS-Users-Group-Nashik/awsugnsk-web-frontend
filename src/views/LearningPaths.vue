@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Learnings</h2>
+    <h2 class="page-heading">Learnings</h2>
     <Learning v-for="index in 5" :key="index" :id="index" />
   </div>
 </template>
