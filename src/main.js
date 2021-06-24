@@ -5,15 +5,7 @@ import router from './router'
 
 import 'vuesax/dist/vuesax.css'
 
-Vue.use(Vuesax, {
-	colors: {
-		primary: '#FFECD1',
-		success: '#60d394',
-		danger: '#ee6055',
-		warning: '#ffd97d',
-		dark: '#101419',
-	},
-})
+Vue.use(Vuesax)
 
 new Vue({
 	router,
