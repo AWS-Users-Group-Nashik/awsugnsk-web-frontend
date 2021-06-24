@@ -20,11 +20,12 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+@font-face {
+  font-family: "Avenir";
+  src: url(assets/fonts/Avenir/Avenir-Book.ttf) format("truetype");
+}
 
 * {
-  font-family: 'Poppins', Arial, Helvetica, sans-serif;
-  /* color: black; */
+  font-family: "Avenir";
 }
-  
 </style>

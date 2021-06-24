@@ -50,51 +50,22 @@
 </template>
 
 <script>
-import Member from '../components/Member.vue'
+import Member from "@/components/Member.vue";
+import ApiService from "@/common/api.service";
 export default {
-	name: 'About',
-	components: { Member },
-	data: () => ({
-		members: [],
-		windowWidth: null,
-	}),
-	created() {
-		this.members = [
-			{
-				id: 1,
-				name: 'Abhishek Wagh',
-				profilePic: '#',
-				linkedin: '#',
-				twitter: '#',
-				tagline: 'To the moon',
-			},
-			{
-				id: 2,
-				name: 'Yash Garudkar',
-				profilePic: '#',
-				linkedin: '#',
-				twitter: '#',
-				tagline: 'Still react>',
-			},
-			{
-				id: 3,
-				name: 'Yash Karande',
-				profilePic: '#',
-				linkedin: '#',
-				twitter: '#',
-				tagline:
-					"I'll be in my room, making no noise and pretending I'm not there (but, coding)",
-			},
-			{
-				id: 4,
-				name: 'Pushkar Thakur',
-				profilePic: '#',
-				linkedin: '#',
-				twitter: '#',
-				tagline: 'The north remembers...',
-			},
-		]
-	},
+  name: "About",
+  components: { Member },
+  data() {
+    return {
+      members: [],
+		  windowWidth: null,
+    };
+  },
+  created() {
+    ApiService.get("/members/").then((response) => {
+      this.members = response.data;
+    });
+  },
 	mounted() {
 		this.windowWidth = window.innerWidth
 		window.addEventListener('resize', () => {
@@ -104,7 +75,7 @@ export default {
 	unmounted() {
 		window.removeEventListener('resize')
 	},
-}
+};
 </script>
 
 <style>

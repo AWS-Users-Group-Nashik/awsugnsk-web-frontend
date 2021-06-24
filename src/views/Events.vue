@@ -6,10 +6,21 @@
 </template>
 
 <script>
-import Event from "../components/Event.vue";
+import Event from "@/components/Event.vue";
+import ApiService from "@/common/api.service";
 export default {
   name: "Events",
   components: { Event },
+  data() {
+    return {
+      events: [],
+    };
+  },
+  created() {
+    ApiService.get("/events/").then((response) => {
+      this.events = response.data;
+    });
+  },
 };
 </script>
 
