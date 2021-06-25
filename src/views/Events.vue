@@ -1,7 +1,13 @@
 <template>
   <div>
     <h2 class="page-heading">Events</h2>
-    <Event v-for="index in 5" :key="index" :id="index" />
+    <div class="container">
+      <vs-row>
+        <vs-col lg="4" sm="6" xs="12" v-for="event in events" :key="event.id">
+          <Event v-bind="event" />
+        </vs-col>
+      </vs-row>
+    </div>
   </div>
 </template>
 
@@ -14,6 +20,7 @@ export default {
   data() {
     return {
       events: [],
+      windowWidth: null,
     };
   },
   created() {
@@ -24,5 +31,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style scoped></style>
