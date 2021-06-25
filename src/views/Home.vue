@@ -1,7 +1,9 @@
 <template>
   <div>
     <h2 class="page-heading">Home</h2>
-    <Story v-for="story in stories" :key="story.id" v-bind="story" />
+    <div class="container">
+      <Story v-for="story in stories" :key="story.id" v-bind="story" />
+    </div>
   </div>
 </template>
 

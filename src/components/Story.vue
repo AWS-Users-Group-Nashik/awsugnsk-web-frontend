@@ -1,6 +1,6 @@
 <template>
   <div class="event-wrapper">
-    <vs-col w="8" xs="12" justify="center">
+    <vs-col xs="12" justify="center">
       <div class="event-card">
         <vs-row>
           <vs-col type="flex" w="6" xs="12" style="flex-flow: wrap">

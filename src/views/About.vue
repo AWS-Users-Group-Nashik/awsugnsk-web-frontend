@@ -101,7 +101,7 @@ export default {
 }
 
 .member-cards {
-	margin-top: 3rem;
+	margin-top: 1rem;
 }
 
 @media screen and (max-width: 768px) {
