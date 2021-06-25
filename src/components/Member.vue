@@ -5,7 +5,7 @@
     </template>
     <template #img>
       <img
-        src="https://www.pixsy.com/wp-content/uploads/2021/04/ben-sweet-2LowviVHZ-E-unsplash-1.jpeg"
+        :src="member.image_url"
         alt="member_photo"
       />
     </template>
@@ -18,10 +18,10 @@
       </p>
     </template>
     <template #interactions>
-      <vs-button danger icon>
+      <vs-button danger icon :href="member.linkedin_url" blank>
         <i class="bx bxl-linkedin"></i>
       </vs-button>
-      <vs-button primary icon>
+      <vs-button primary icon :href="member.twitter_url" blank>
         <i class="bx bxl-twitter"></i>
       </vs-button>
     </template>

@@ -29,9 +29,15 @@ export default {
   font-family: "Avenir";
 }
 
+.container {
+  max-width: 1080px;
+  margin: auto;
+}
+
 .page-heading {
+  max-width: 1080px;
+  margin: auto;
   margin-top: 100px;
-  margin-left: 15vw;
   font-size: 50px;
   text-decoration: #ffc074 solid overline;
 }
