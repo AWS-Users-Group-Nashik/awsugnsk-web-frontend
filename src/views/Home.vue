@@ -27,6 +27,19 @@ export default {
     const loading = this.$vs.loading({ type: "circles", color: "#ffc074" });
     ApiService.get("/stories/").then((response) => {
       this.stories = response.data;
+      if (this.stories.length) {
+        this.stories.forEach((story) => {
+          story.date = new Date(story.date).toLocaleString(undefined, {
+            timeZone: "Asia/Kolkata",
+            weekday: "short",
+            day: "numeric",
+            year: "numeric",
+            month: "long",
+            hour: "numeric",
+            minute: "numeric",
+          });
+        });
+      }
       this.isResponseReceived = true;
       loading.close();
     });

@@ -32,6 +32,19 @@ export default {
     const loading = this.$vs.loading({ type: "circles", color: "#ffc074" });
     ApiService.get("/events/").then((response) => {
       this.events = response.data;
+      if (this.events.length) {
+        this.events.forEach((event) => {
+          event.start_at = new Date(event.start_at).toLocaleString(undefined, {
+            timeZone: "Asia/Kolkata",
+            weekday: "short",
+            day: "numeric",
+            year: "numeric",
+            month: "long",
+            hour: "numeric",
+            minute: "numeric",
+          });
+        });
+      }
       this.isResponseReceived = true;
       loading.close();
     });
