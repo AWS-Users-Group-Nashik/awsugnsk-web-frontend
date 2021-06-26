@@ -56,7 +56,7 @@ body {
 .page-heading {
   max-width: 1080px;
   margin: auto;
-  margin-top: 100px;
+  margin-top: 140px;
 }
 
 .page-heading-title {
@@ -69,7 +69,7 @@ body {
 }
 
 .footer {
-  height: 60px;
+  height: 90px;
 }
 
 @media screen and (max-width: 768px) {
