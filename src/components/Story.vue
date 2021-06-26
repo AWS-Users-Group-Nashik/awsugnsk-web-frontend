@@ -1,7 +1,7 @@
 <template>
-  <div class="event-wrapper">
+  <div class="story-wrapper">
     <vs-col xs="12" justify="center">
-      <div class="event-card">
+      <div class="story-card">
         <vs-row>
           <vs-col type="flex" w="6" xs="12" style="flex-flow: wrap">
             <div>
@@ -21,7 +21,12 @@
             style="flex-flow: wrap; justify-content: flex-end"
           >
             <div class="description" v-html="content"></div>
-            <vs-button circle shadow style="margin: 10px; padding: 5px">
+            <vs-button
+              circle
+              shadow
+              style="margin: 10px; padding: 5px"
+              @click="openDialog()"
+            >
               Read more
               <template #animate>
                 <i class="bx bx-book-reader"></i>
@@ -31,43 +36,69 @@
         </vs-row>
       </div>
     </vs-col>
+    <FullStoryDialog
+      v-if="dialogActive"
+      :story="story"
+      v-on:close="closeCallback"
+    />
   </div>
 </template>
 
 <script>
+import FullStoryDialog from "./FullStoryDialog.vue";
 export default {
   name: "Story",
+  components: {
+    FullStoryDialog,
+  },
   props: {
-    id: { type: Number },
+    id: {
+      FullStoryDialogtype: Number,
+    },
     title: { type: String },
     speaker_name: { type: String },
     poster_url: { type: String },
     date: { type: String },
     content: { type: String },
   },
+  mounted() {
+    this.story = { ...this._props };
+  },
+  data: () => ({
+    dialogActive: false,
+  }),
+  methods: {
+    openDialog() {
+      this.dialogActive = true;
+    },
+    closeCallback() {
+      console.log("asdf");
+      this.dialogActive = false;
+    },
+  },
 };
 </script>
 
 <style>
-.event-wrapper {
-  margin: 70px 10px;
+.story-wrapper {
+  margin: 50px 0px 70px 0px;
   display: grid;
   place-items: center;
 }
 
-.event-card {
+.story-card {
   padding: 20px;
   border-radius: 30px;
   transition: 500ms ease;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-.event-card:hover {
+.story-card:hover {
   transition: 500ms ease;
   box-shadow: rgba(149, 157, 165, 1) 0px 20px 40px;
 }
 
-.event-card:hover .story-img {
+.story-card:hover .story-img {
   transition: 500ms ease;
   margin-top: -30px;
   margin-left: -30px;
@@ -80,6 +111,7 @@ export default {
   width: 150px;
   transition: 500ms ease;
   border-radius: 30px;
+  object-fit: cover;
 }
 
 .description {
@@ -112,6 +144,10 @@ export default {
   .title-date-wrapper {
     margin-top: 20px;
     margin-left: 0px;
+  }
+
+  .story-wrapper {
+    margin: 50px 10px 70px 10px;
   }
 }
 </style>
