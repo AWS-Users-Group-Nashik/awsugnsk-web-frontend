@@ -12,7 +12,7 @@
       </p>
     </template>
     <template #interactions>
-      <vs-button :href="url" primary icon>
+      <vs-button :href="url" blank circle color="#fff" icon>
         <i class="bx bx-link-external"></i>
       </vs-button>
     </template>
@@ -36,6 +36,11 @@ export default {
 
 <style scoped>
 .event-card {
-  margin: 20px 30px 20px 0;
+  padding: 10px;
+  display: grid;
+  place-items: center;
+}
+.bx-link-external {
+  color: black
 }
 </style>
