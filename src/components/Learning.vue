@@ -1,20 +1,22 @@
 <template>
-  <vs-card type="4" class="learning-card">
-    <template #title>
-      <h3>{{ title }}</h3>
-    </template>
-    <template #img>
-      <img :src="image_url" :alt="title" class="learning-image" />
-    </template>
-    <template #text>
-      <p>{{ proficiency }}</p>
-    </template>
-    <template #interactions>
-      <vs-button v-bind:color="buttonColor" icon :href="url" blank circle>
-        <i v-bind:class="buttonIcon"></i>
-      </vs-button>
-    </template>
-  </vs-card>
+  <a :href="url" target="_blank">
+    <vs-card type="4" class="learning-card">
+      <template #title>
+        <h3>{{ title }}</h3>
+      </template>
+      <template #img>
+        <img :src="image_url" :alt="title" class="learning-image" />
+      </template>
+      <template #text>
+        <p>{{ proficiency }}</p>
+      </template>
+      <template #interactions>
+        <vs-button v-bind:color="buttonColor" icon :href="url" blank circle>
+          <i v-bind:class="buttonIcon"></i>
+        </vs-button>
+      </template>
+    </vs-card>
+  </a>
 </template>
 
 <script>
