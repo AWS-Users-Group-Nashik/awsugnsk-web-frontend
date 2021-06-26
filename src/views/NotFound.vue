@@ -22,4 +22,11 @@ export default {
   height: 500px;
   width: 700px;
 }
+
+@media screen and (max-width: 768px) {
+  .not-found-image {
+    height: 250px;
+    width: 80vw;
+  }
+}
 </style>

@@ -72,7 +72,6 @@ export default {
       this.dialogActive = true;
     },
     closeCallback() {
-      console.log("asdf");
       this.dialogActive = false;
     },
   },
