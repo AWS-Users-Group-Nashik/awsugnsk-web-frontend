@@ -2,25 +2,51 @@
   <div class="footer-wrapper">
     <vs-row>
       <vs-col lg="4" sm="12" type="flex" justify="center">
-        <vs-button icon circle color="#ffc074">
-          <i class="bx bxl-twitter bx-sm"></i>
+        <vs-button icon circle shadow>
+          <a
+            href="https://twitter.com/awsugnashik"
+            target="_blank"
+            class="icon-href"
+            ><i class="bx bxl-twitter bx-sm"></i
+          ></a>
         </vs-button>
-        <vs-button icon circle color="#ffc074">
-          <i class="bx bxl-linkedin-square bx-sm"></i>
+        <vs-button icon circle shadow>
+          <a
+            href="https://www.linkedin.com/company/aws-user-group-nashik"
+            target="_blank"
+            class="icon-href"
+          >
+            <i class="bx bxl-linkedin-square bx-sm"></i>
+          </a>
         </vs-button>
-        <vs-button icon circle color="#ffc074">
-          <i class="bx bxl-whatsapp bx-sm"></i>
+        <vs-button icon circle shadow>
+          <a
+            href="https://chat.whatsapp.com/FESwePvFLqcDYirZmjcqjX"
+            target="_blank"
+            class="icon-href"
+          >
+            <i class="bx bxl-whatsapp bx-sm"></i>
+          </a>
         </vs-button>
-        <vs-button icon circle color="#ffc074">
-          <i class="bx bxl-telegram bx-sm"></i>
+        <vs-button icon circle shadow>
+          <a
+            href="https://join.slack.com/t/awsusergroupnashik/shared_invite/zt-ryeqij9f-XN7VzVIlt4OcJE~pv3Lt5A"
+            target="_blank"
+            class="icon-href"
+          >
+            <i class="bx bxl-slack bx-sm"></i>
+          </a>
         </vs-button>
-        <vs-button icon circle color="#ffc074">
-          <i class="bx bxl-discord bx-sm"></i>
+        <vs-button icon circle shadow>
+          <i class="bx bxl-facebook bx-sm"></i>
+        </vs-button>
+        <vs-button icon circle shadow>
+          <i class="bx bxl-youtube bx-sm" href=""></i>
         </vs-button>
       </vs-col>
       <vs-col lg="4" sm="12" type="flex" justify="center" class="email-wrapper">
         <a href="mailto:awsugnsk@gmail.com" class="email-text"
-          >Email: awsugnsk@gmail.com</a
+          >awsugnsk@gmail.com</a
         >
       </vs-col>
       <vs-col
@@ -49,10 +75,11 @@ export default {
   margin-top: 50px;
   display: grid;
   place-items: center;
-  color: white;
+  color: #222831;
   font-weight: bold;
-  background: #ffc074;
+  background: #fff;
   border-radius: 20px 20px 0px 0px;
+  box-shadow: rgba(149, 157, 165, 1) 2px 10px 25px;
 }
 
 .email-wrapper,
@@ -63,8 +90,13 @@ export default {
 .email-text,
 .made-by-text {
   text-decoration: none;
-  color: white;
-  font-size: 15px;
+  color: #222831;
+  font-size: 18px;
+}
+
+.icon-href {
+  text-decoration: none;
+  color: #222831;
 }
 
 @media screen and (max-width: 768px) {

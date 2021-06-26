@@ -35,6 +35,17 @@
           About
         </vs-navbar-item>
       </template>
+      <template #right>
+        <vs-button icon circle shadow>
+          <a
+            href="https://github.com/AWS-Users-Group-Nashik"
+            target="_blank"
+            class="icon-href"
+          >
+            <i class="bx bxl-github bx-md"></i>
+          </a>
+        </vs-button>
+      </template>
     </vs-navbar>
   </div>
 </template>
@@ -57,8 +68,20 @@ export default {
 .vs-navbar {
   top: 0;
   position: fixed !important;
-  background-color: #ffc074;
+  background-color: #fff;
   border-radius: 0px 0px 20px 20px;
   color: #171717;
+  height: 90px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 5px 15px;
+}
+
+.vs-navbar__item {
+  font-size: 20px !important;
+}
+
+@media screen and (max-width: 768px) {
+  .vs-navbar__item {
+    font-size: 15px !important;
+  }
 }
 </style>
