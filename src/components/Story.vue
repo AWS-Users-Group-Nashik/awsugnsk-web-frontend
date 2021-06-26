@@ -89,12 +89,12 @@ export default {
   padding: 20px;
   border-radius: 30px;
   transition: 500ms ease;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 5px 15px;
 }
 
 .story-card:hover {
   transition: 500ms ease;
-  box-shadow: rgba(149, 157, 165, 1) 0px 20px 40px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .story-card:hover .story-img {

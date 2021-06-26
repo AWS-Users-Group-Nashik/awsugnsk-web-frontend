@@ -18,7 +18,7 @@
       </vs-row>
     </div>
     <div class="center grid member-cards">
-      <h2 class="members-subtitle">Core team</h2>
+      <h2 class="members-subtitle">Organizers</h2>
       <vs-row vs-w="12">
         <vs-col
           :key="member.id"
@@ -121,7 +121,7 @@ export default {
 }
 
 .member-cards {
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 .member-card {
