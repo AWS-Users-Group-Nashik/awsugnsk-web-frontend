@@ -1,28 +1,25 @@
 <template>
   <vs-card type="5">
     <template #title>
-      <h2>{{ member.name }}</h2>
+      <h2>{{ member.name }} ({{ member.member_type }})</h2>
     </template>
     <template #img>
-      <img
-        :src="member.image_url"
-        alt="member_photo"
-      />
+      <img :src="member.image_url" :alt="member.name" />
     </template>
     <template #text>
-      <h3>
-        {{ member.member_type }}
-      </h3>
       <p>
         {{ member.bio }}
       </p>
     </template>
     <template #interactions>
-      <vs-button danger icon :href="member.linkedin_url" blank>
+      <vs-button color="linkedin" circle icon :href="member.linkedin_url" blank>
         <i class="bx bxl-linkedin"></i>
       </vs-button>
-      <vs-button primary icon :href="member.twitter_url" blank>
+      <vs-button color="twitter" circle icon :href="member.twitter_url" blank>
         <i class="bx bxl-twitter"></i>
+      </vs-button>
+      <vs-button color="#171717" circle icon :href="member.website_url" blank>
+        <i class="bx bxl-github"></i>
       </vs-button>
     </template>
   </vs-card>
@@ -32,9 +29,10 @@
 export default {
   name: "Member",
   props: {
-    member: Object
-  }
+    member: Object,
+  },
 };
 </script>
 
-<style></style>
+<style>
+</style>
