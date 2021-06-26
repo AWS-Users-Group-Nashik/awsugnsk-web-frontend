@@ -9,7 +9,7 @@
 						Amazon Web Services User Group (UG) Nashik is a place for developers
 						that share the common interest of building with AWS. Here we will
 						share content relevant to AWS UG Nashik, all the talks hosted at AWS
-						UG Nashik,,resources to learn the AWS products and a lot of exciting
+						UG Nashik, resources to learn the AWS products and a lot of exciting
 						stuff.<br />
 						Make sure you are subscribed to the newsletter for staying updated
 						with upcoming talks and events.
@@ -54,23 +54,18 @@ export default {
 		return {
 			leader: null,
 			coreMembers: [],
-			volunteers: [],
 			windowWidth: null,
 		}
 	},
 	created() {
 		ApiService.get('/members/').then((response) => {
-			console.log(response.data)
 			response.data.forEach((member) => {
-				if (member.member_type === 'Leader') {
+				if (member.member_type === 'LEAD') {
 					this.leader = member
-				} else if (member.member_type === 'Core Team Member') {
+				} else if (member.member_type === 'CORE') {
 					this.coreMembers.push(member)
-				} else if (member.member_type === 'Volunteer') {
-					this.volunteers.push(member)
 				}
 			})
-			console.log(this.coreMembers)
 		})
 	},
 	mounted() {
