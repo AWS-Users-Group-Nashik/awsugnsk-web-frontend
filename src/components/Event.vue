@@ -1,22 +1,19 @@
 <template>
-  <vs-card class="event-card">
-    <template #title>
-      <h3>{{ title }}</h3>
-    </template>
-    <template #img>
-      <img :src="image_url" :alt="title" />
-    </template>
-    <template #text>
-      <p>
-        {{ start_at }}
-      </p>
-    </template>
-    <template #interactions>
-      <vs-button :href="url" blank circle color="#fff" icon>
-        <i class="bx bx-link-external"></i>
-      </vs-button>
-    </template>
-  </vs-card>
+  <a :href="url" target="_blank" class="event-anchor">
+    <vs-card class="event-card">
+      <template #title>
+        <h3>{{ title }}</h3>
+      </template>
+      <template #img>
+        <img :src="image_url" :alt="title" />
+      </template>
+      <template #text>
+        <p>
+          {{ start_at }}
+        </p>
+      </template>
+    </vs-card>
+  </a>
 </template>
 
 <script>
@@ -40,7 +37,12 @@ export default {
   display: grid;
   place-items: center;
 }
+
 .bx-link-external {
-  color: black
+  color: black;
+}
+
+.event-anchor {
+  text-decoration: none;
 }
 </style>
