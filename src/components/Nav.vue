@@ -1,6 +1,9 @@
   <template>
   <div class="right nav-wrapper">
     <vs-navbar>
+      <template #left>
+        <img class="nav-logo" src="../assets/images/awsLogo.png" />
+      </template>
       <template>
         <vs-navbar-item
           :active="active == 'stories'"
@@ -79,9 +82,28 @@ export default {
   font-size: 20px !important;
 }
 
+.nav-logo {
+  height: 70px;
+  width: 70px;
+}
+
+.vs-navbar {
+  justify-content: space-evenly !important;
+}
+
 @media screen and (max-width: 768px) {
   .vs-navbar__item {
-    font-size: 15px !important;
+    font-size: 13px !important;
+  }
+
+  .nav-logo {
+    height: 45px;
+    width: 45px;
+    margin-right: 5px;
+  }
+
+  .vs-navbar__item {
+    padding: 10px 8px !important;
   }
 }
 </style>

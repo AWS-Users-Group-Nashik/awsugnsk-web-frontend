@@ -4,14 +4,6 @@
       <vs-col lg="4" sm="12" type="flex" justify="center">
         <vs-button icon circle shadow>
           <a
-            href="https://twitter.com/awsugnashik"
-            target="_blank"
-            class="icon-href"
-            ><i class="bx bxl-twitter bx-sm"></i
-          ></a>
-        </vs-button>
-        <vs-button icon circle shadow>
-          <a
             href="https://www.linkedin.com/company/aws-user-group-nashik"
             target="_blank"
             class="icon-href"
@@ -21,11 +13,37 @@
         </vs-button>
         <vs-button icon circle shadow>
           <a
-            href="https://chat.whatsapp.com/FESwePvFLqcDYirZmjcqjX"
+            href="https://twitter.com/awsugnashik"
+            target="_blank"
+            class="icon-href"
+            ><i class="bx bxl-twitter bx-sm"></i
+          ></a>
+        </vs-button>
+        <vs-button icon circle shadow>
+          <a
+            href="https://www.facebook.com/awsugnsk/"
             target="_blank"
             class="icon-href"
           >
-            <i class="bx bxl-whatsapp bx-sm"></i>
+            <i class="bx bxl-facebook bx-sm"></i>
+          </a>
+        </vs-button>
+        <vs-button icon circle shadow>
+          <a
+            href="https://www.youtube.com/channel/UCzxR3NybF1h28v0jFxcB5tw"
+            target="_blank"
+            class="icon-href"
+          >
+            <i class="bx bxl-youtube bx-sm" href=""></i>
+          </a>
+        </vs-button>
+        <vs-button icon circle shadow>
+          <a
+            href="https://www.instagram.com/awsugnsk/"
+            target="_blank"
+            class="icon-href"
+          >
+            <i class="bx bxl-instagram bx-sm"></i>
           </a>
         </vs-button>
         <vs-button icon circle shadow>
@@ -38,10 +56,13 @@
           </a>
         </vs-button>
         <vs-button icon circle shadow>
-          <i class="bx bxl-facebook bx-sm"></i>
-        </vs-button>
-        <vs-button icon circle shadow>
-          <i class="bx bxl-youtube bx-sm" href=""></i>
+          <a
+            href="https://chat.whatsapp.com/FESwePvFLqcDYirZmjcqjX"
+            target="_blank"
+            class="icon-href"
+          >
+            <i class="bx bxl-whatsapp bx-sm"></i>
+          </a>
         </vs-button>
       </vs-col>
       <vs-col lg="4" sm="12" type="flex" justify="center" class="email-wrapper">
