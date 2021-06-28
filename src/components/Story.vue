@@ -115,9 +115,9 @@ export default {
 
 .description {
   overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  height: 100px;
+  line-height: 20px;
 }
 
 .story-title {
