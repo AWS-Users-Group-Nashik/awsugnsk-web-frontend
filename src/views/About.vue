@@ -40,8 +40,8 @@
         <vs-col
           :key="member.id"
           v-for="member in volunteers"
+          type="flex"
           justify="center"
-          align="space-around"
           lg="4"
           sm="6"
           xs="12"
