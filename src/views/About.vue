@@ -6,11 +6,11 @@
         <vs-col justify="center" align="center" lg="12" sm="12" xs="12">
           <p>
             Welcome!<br />
-            Amazon Web Services User Group (UG) Nashik is a place for developers
-            that share the common interest of building with AWS. Here we will
-            share content relevant to AWS UG Nashik, all the talks hosted at AWS
-            UG Nashik,,resources to learn the AWS products and a lot of exciting
-            stuff.<br />
+            <b>AWS User Group (UG), Nashik</b> is a place for
+            developers that share the common interest of building with AWS. Here
+            we will share content relevant to AWS UG Nashik, all the talks
+            hosted at AWS UG Nashik, resources to learn the AWS products and a
+            lot of exciting stuff.<br />
             Make sure you are subscribed to the newsletter for staying updated
             with upcoming talks and events.
           </p>
@@ -133,7 +133,8 @@ export default {
 }
 
 @media screen and (max-width: 768px) {
-  .about-us, .members-subtitle {
+  .about-us,
+  .members-subtitle {
     margin: 5vw;
   }
 }
