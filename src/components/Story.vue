@@ -6,7 +6,7 @@
           <vs-col type="flex" w="6" xs="12" style="flex-flow: wrap">
             <div>
               <vs-col type="flex" style="margin-top: -40px" w="4">
-                <img class="story-img" v-bind:src="poster_url" />
+                <img class="story-img" v-bind:src="preview_image_url" />
               </vs-col>
             </div>
             <vs-col class="title-date-wrapper" w="5" xs="12" lg="6" sm="12">
@@ -60,6 +60,7 @@ export default {
     poster_url: { type: String },
     date: { type: String },
     content: { type: String },
+    preview_image_url: { type: String },
   },
   mounted() {
     this.story = { ...this._props };
@@ -147,6 +148,10 @@ export default {
 
   .story-wrapper {
     margin: 50px 10px 70px 10px;
+  }
+
+  .story-card {
+    width: calc(100vw - 60px);
   }
 }
 </style>
