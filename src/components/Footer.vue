@@ -65,10 +65,27 @@
           </a>
         </vs-button>
       </vs-col>
-      <vs-col lg="4" sm="12" type="flex" justify="center" class="email-wrapper">
-        <a href="mailto:awsugnsk@gmail.com" class="email-text"
-          >awsugnsk@gmail.com</a
+      <vs-col
+        lg="4"
+        sm="12"
+        type="flex"
+        justify="center"
+        class="supported-by-wrapper"
+      >
+        <a
+          href="https://www.jetbrains.com/"
+          target="_blank"
+          class="supported-by-text"
         >
+          <span style="font-weight: normal; margin-right: 5px"
+            >Supported by</span
+          >
+          Jetbrains
+          <img
+            class="supported-by-logo"
+            src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg"
+            alt="JetBrains Logo (Main) logo."
+        /></a>
       </vs-col>
       <vs-col
         lg="4"
@@ -103,16 +120,30 @@ export default {
   box-shadow: rgba(149, 157, 165, 1) 2px 10px 25px;
 }
 
-.email-wrapper,
+.supported-by-wrapper,
 .made-by-wrapper {
   align-self: center;
 }
 
-.email-text,
+.supported-by-text,
 .made-by-text {
   text-decoration: none;
   color: #222831;
-  font-size: 18px;
+  font-size: 20px;
+}
+
+.made-by-text {
+  font-size: 15px;
+}
+
+.supported-by-text {
+  display: flex;
+  place-items: center;
+}
+
+.supported-by-logo {
+  height: 35px;
+  margin-left: 5px;
 }
 
 .icon-href {
@@ -121,9 +152,13 @@ export default {
 }
 
 @media screen and (max-width: 768px) {
-  .email-wrapper,
+  .supported-by-wrapper,
   .made-by-wrapper {
     margin: 10px 0px;
+  }
+
+  .made-by-text {
+    font-size: 12px;
   }
 }
 </style>
